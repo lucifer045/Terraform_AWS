@@ -62,6 +62,54 @@ By completing this project, you will understand:
           +-----------+----------+
                       |
                       v          
-         +--------------------+
-         | Nodes Join Cluster |
-         +--------------------+
+           +--------------------+
+           | Nodes Join Cluster |
+           +--------------------+
+
+---
+### 🚀 Deployment Steps
+
+1️⃣ Initialize Terraform
+```bash
+terraform init
+```
+2️⃣ Validate and Plan
+```bash
+terraform plan
+```
+3️⃣ Apply Infrastructurre
+```bash
+terraform apply
+```
+4️⃣ Destroy (when needed)
+```bash
+terraform destroy
+```
+⚠️ Before destroying, migrate your state back to local if you want to delete the S3 backend bucket:
+```bash
+terraform init -migrate-state -backend-config="path=terraform.tfstate"
+```
+---
+### ❗ Important Terraform Notes
+DO NOT commit:
+```bash
+.terraform/
+terraform.tfstate
+terraform-provider-*
+```
+Always use .gitignore before running:
+```bash
+terraform init
+```
+
+---
+💬 Want to Improve This Project?
+Feel free to fork the repo and raise PRs 👇
+https://github.com/lucifer045/Terraform_AWS
+
+---
+
+### 👨‍💻 Author
+**Prince Raghav** — Freelance DevOps & SRE Engineer  
+🔗 GitHub: https://github.com/lucifer045  
+🔗 LinkedIn: https://www.linkedin.com/in/prince-raghav
