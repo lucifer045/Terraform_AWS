@@ -17,22 +17,25 @@ The goal of this repository is to:
 ---
 
 ### 🔹 Best Practices
-.terraform/ and *.tfstate files are not included in Git
-Use .gitignore to prevent committing sensitive files
-Follow Terraform IaC standards for variables, outputs, and modules
-Read each project’s README for architecture and instructions
+
+- .terraform/ and *.tfstate files are not included in Git
+- Use .gitignore to prevent committing sensitive files
+- Follow Terraform IaC standards for variables, outputs, and modules
+- Read each project’s README for architecture and instructions
 
 ---
 
 ### 🔹 Contribute / Learn
-Explore: Clone the repository and navigate through the project folders
-Learn: Follow along and practice creating AWS infrastructure
-Star: Support the repo if you find it useful
+
+- Explore: Clone the repository and navigate through the project folders
+- Learn: Follow along and practice creating AWS infrastructure
+- Star: Support the repo if you find it useful
 
 This repository is intended for learning, reference, and portfolio purposes.
 
 ---
 
-### 🔹 Contact / Follow
-GitHub: https://github.com/lucifer045
-LinkedIn: www.linkedin.com/in/princeraghav
+### 👨‍💻 Author
+**Prince Raghav** — Freelance DevOps & SRE Engineer  
+🔗 GitHub: https://github.com/lucifer045  
+🔗 LinkedIn: https://www.linkedin.com/in/prince-raghav
