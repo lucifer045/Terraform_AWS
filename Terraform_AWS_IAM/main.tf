@@ -1,3 +1,13 @@
+# ====================================================
+# IAM ROLE MODULE CALL
+# ====================================================
+# This module provisions multiple IAM roles using a
+# scalable, variable-driven configuration.
+# It handles role creation, trust policies, and policy
+# attachments in a reusable and automated manner.
+# ====================================================
+
+
 module "IAM_role" {
     source = "./modules/IAM_role"
     region = "us-west-1"
