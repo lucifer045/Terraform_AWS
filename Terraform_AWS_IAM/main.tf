@@ -5,8 +5,6 @@
 # scalable, variable-driven configuration.
 # It handles role creation, trust policies, and policy
 # attachments in a reusable and automated manner.
-# ====================================================
-
 
 module "IAM_role" {
     source = "./modules/IAM_role"
