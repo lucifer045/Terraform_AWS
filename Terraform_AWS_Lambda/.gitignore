@@ -1,0 +1,17 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfstate.*
+.terraform.lock.hcl
+crash.log
+
+# Providers
+terraform-provider-*
+
+# OS files
+.DS_Store
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
