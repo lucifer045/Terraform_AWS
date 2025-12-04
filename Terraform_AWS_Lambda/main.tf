@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-east-1"
+  region = var.region
 }
 
 module "s3" {
@@ -30,5 +30,5 @@ resource "aws_s3_bucket_notification" "bucket_notification"{
 
 module "dynamodb" {
   source = "./modules/dynamodb"
-  env = dev
+  env = "dev"
 }

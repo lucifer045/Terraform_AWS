@@ -1,4 +1,4 @@
-data "archiive_file" "lambda_zip"{
+data "archive_file" "lambda_zip"{
     type = "zip"
     source_dir = "${path.module}/../../src"
     output_path = "${path.module}/function.zip"
@@ -24,7 +24,7 @@ resource "aws_iam_role_policy_attachment" "lambda_attachment" {
 }
 
 resource "aws_iam_role_policy" "s3_read_access" {
-  name = s3_read_access
+  name = "s3_read_access"
   role = aws_iam_role.lambda_role.id
   policy = jsonencode({
     Version = "2012-10-17"
@@ -38,8 +38,8 @@ resource "aws_iam_role_policy" "s3_read_access" {
 
 resource "aws_lambda_function" "processor" {
    function_name = "${var.env}-processsor"
-   filename = data.archiive_file.lambda_zip.output_path
-   source_code_hash = data.archiive_file.lambda_zip.output_base64sha256
+   filename = data.archive_file.lambda_zip.output_path
+   source_code_hash = data.archive_file.lambda_zip.output_base64sha256
    role = aws_iam_role.lambda_role.arn
    handler = "process_image.lambda_handler"
    runtime = "python3.9"
