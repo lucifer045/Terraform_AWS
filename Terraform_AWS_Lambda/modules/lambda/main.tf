@@ -46,6 +46,13 @@ resource "aws_lambda_function" "processor" {
 
    timeout = 10
    memory_size = 128
+
+   environment {
+     variables = {
+        ENV = var.env
+        TABLE_NAME = var.dynamodb_table_name
+     }
+   }
 }
 
 resource "aws_lambda_permission" "allow_s3"{
@@ -54,4 +61,20 @@ resource "aws_lambda_permission" "allow_s3"{
     function_name = aws_lambda_function.processor.function_name
     principal = "s3.amazonaws.com"
     source_arn = var.s3_bucket_arn
+}
+
+resource "aws_iam_role_policy" "dynamodb_write" {
+  name = "dynamodb-write-access"
+  role = aws_iam_role.lambda_role.id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+        {
+            Action = ["dynamodb:PutItem"]
+            Effect = "Allow"
+            Resource = var.dynamodb_table_arn
+        }
+    ]
+  })
 }

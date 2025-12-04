@@ -12,8 +12,11 @@ module "lambda" {
     source = "./modules/lambda"
     env = "dev"
     s3_bucket_arn = module.s3.bucket_arn
+    dynamodb_table_arn = module.dynamodb.table_arn
+    dynamodb_table_name = module.dynamodb.table_name
 }
 
+#It configures S3 to invoke Lambda automatically when a .jpg file is uploaded into the bucket.
 resource "aws_s3_bucket_notification" "bucket_notification"{
     bucket = module.s3.bucket_id
     lambda_function {
@@ -23,4 +26,9 @@ resource "aws_s3_bucket_notification" "bucket_notification"{
     }
 
     depends_on = [module.lambda]
+}
+
+module "dynamodb" {
+  source = "./modules/dynamodb"
+  env = dev
 }
