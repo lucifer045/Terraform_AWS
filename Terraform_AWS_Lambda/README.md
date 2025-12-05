@@ -85,7 +85,7 @@ graph LR
     User[User] -->|Uploads .jpg| S3[S3 Bucket]
     S3 -->|Triggers Event| Lambda[AWS Lambda]
     Lambda -->|Writes Data| DDB[(DynamoDB)]
-
+```
 ---
 ### 📤 Outputs
 
@@ -100,7 +100,7 @@ You can view all outputs by running:
 
 ```bash
 terraform output
-
+```
 
 ---
 ### ❗ Important Terraform Notes
