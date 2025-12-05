@@ -92,10 +92,7 @@ graph LR
 After deployment, you can verify the following Terraform outputs:
 
 - **S3 Bucket Name** – the bucket where you will upload `.jpg` files.
-- **Lambda Function ARN** – the function that gets triggered by S3 uploads.
 - **DynamoDB Table Name** – the table where metadata is stored.
-- **S3 Bucket ARN** – used internally for permissions and event notifications.
-
 You can view all outputs by running:
 
 ```bash
