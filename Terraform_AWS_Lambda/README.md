@@ -45,7 +45,7 @@ resource "aws_s3_bucket_notification" "bucket_notification" {
 
   depends_on = [module.lambda]
 }
-
+```
 ---
 
 ### 🚀 Deployment Steps
