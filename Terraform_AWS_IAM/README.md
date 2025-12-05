@@ -2,7 +2,6 @@
 
 ![Terraform](https://img.shields.io/badge/Terraform-v1.9%2B-623CE4?logo=terraform)
 ![AWS](https://img.shields.io/badge/AWS-Cloud-orange?logo=amazonaws)
-![License](https://img.shields.io/badge/License-MIT-green)
 ![IaC](https://img.shields.io/badge/Infrastructure--as--Code-Enabled-blue)
 
 This repository demonstrates AWS IAM role management using Terraform as part of my DevOps / SRE learning path.
